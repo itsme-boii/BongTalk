@@ -16,6 +16,7 @@ import "@solana/wallet-adapter-react-ui/styles.css";
 
 import { Buffer } from 'buffer';
 import TokenCreator from "./anchor/setup";
+import BuyToken from "./anchor/buyToken";
 window.Buffer = Buffer;
  
 function App() {
@@ -37,6 +38,7 @@ function App() {
           <WalletMultiButton />
           <h1>Hello Solana</h1>
           <TokenCreator/>
+          <BuyToken/>
         </WalletModalProvider>
       </WalletProvider>
     </ConnectionProvider>

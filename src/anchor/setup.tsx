@@ -39,8 +39,8 @@ const uploadToPinata = async (base64Image: string) => {
     console.log("imageUrl is ", imageUrl);
 
     const metadata = {
-      "name": "Zkagi",
-      "symbol": "ZK",
+      "name": "s",
+      "symbol": "ss",
       "description": "This is the best token ever!",
       "image": imageUrl
 
@@ -100,8 +100,8 @@ const TokenCreator = () => {
 
       console.log("Program ID:", program.programId.toString());
       const tokenDetails = {
-        name: "cdc",
-        symbol: "Cdc",
+        name: "s",
+        symbol: "ss",
         uri: uri,
       };
 
@@ -121,6 +121,8 @@ const TokenCreator = () => {
         program.programId
       )[0];
 
+      console.log("mintkeypair is ", mintKeypair.toString());
+      localStorage.setItem("tokenAddress", mintKeypair.toString());
       const metadataKeypair = anchor.web3.PublicKey.findProgramAddressSync(
         [
           Buffer.from("metadata"),
